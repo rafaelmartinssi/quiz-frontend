@@ -1,0 +1,12 @@
+{
+  "App": {
+    "home": "Início",
+    "example": "Exemplo",
+    "options": "Opções",
+    "title": "Título"
+  },
+  "Locale": {
+    "en": "Inglês",
+    "pt": "Português"
+  }
+}
