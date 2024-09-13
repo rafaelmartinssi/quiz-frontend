@@ -1,6 +1,5 @@
 import "./globals.css";
 
-import Layout from "@/components/layout";
 import AppLayout from "@/components/layout/app-layout";
 import AppProvider from "@/context/app-context";
 import React from "react";
