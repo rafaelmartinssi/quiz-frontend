@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import ToggleLocale from '../shared/toggle-locale';
 import ToggleTheme from '../shared/toggle-theme';
+import UserSettings from '../user/user-settings';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -43,6 +44,7 @@ export default function HeaderWeb ({ open }: { open: boolean }) {
       <Box sx={{ flexGrow: 1 }} />
       <ToggleLocale />
       <ToggleTheme />
+      <UserSettings />
     </Toolbar>
   </AppBar>
   )
