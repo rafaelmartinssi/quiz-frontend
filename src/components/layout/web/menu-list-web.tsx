@@ -13,7 +13,10 @@ export default function MenuListWeb ({ open }: { open: boolean }) {
     return pathname === path;
   }
   return (
-    <List subheader={open ? <ListSubheader>{t('options')}</ListSubheader> : null}>
+    <List subheader={open ? <ListSubheader sx={{
+      fontWeight: 'light',
+      fontSize: '12px'
+    }}>{t('options')}</ListSubheader> : null}>
       <MenuListItemWeb open={open} title={t('home')} path={'/'} active={isActive('/')}>
         <HomeRounded />
       </MenuListItemWeb>

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { Metadata } from "next";
 import {useTranslations} from 'next-intl';
 

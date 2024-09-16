@@ -3,7 +3,12 @@
     "home": "Home",
     "example": "Example",
     "options": "Options",
-    "title": "Title"
+    "title": "Title",
+    "settings": "Settings",
+    "logout": "Logout",
+    "light": "Light",
+    "dark": "Dark",
+    "theme": "Theme"
   },
   "Locale": {
     "en": "English",

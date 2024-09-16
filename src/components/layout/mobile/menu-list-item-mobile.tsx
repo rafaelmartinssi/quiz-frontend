@@ -36,7 +36,13 @@ export default function MenuListItemMobile (
           >
             {children}
           </ListItemIcon>
-          <ListItemText primary={title} />
+          <ListItemText
+            primary={title}
+            primaryTypographyProps={{
+              fontWeight: 'light',
+              fontSize: '14px',
+            }}
+          />
         </ListItemButton>
       </ListItem>
     </Link>

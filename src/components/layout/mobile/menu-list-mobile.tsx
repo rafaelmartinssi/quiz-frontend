@@ -14,7 +14,10 @@ export default function MenuListMobile ({ handleDrawerClose }: { handleDrawerClo
   }
   return (
     <Box sx={{ width: '70vw' }}>
-      <List subheader={<ListSubheader>{t('options')}</ListSubheader>}>
+      <List subheader={<ListSubheader sx={{
+        fontWeight: 'light',
+        fontSize: '12px'
+      }}>{t('options')}</ListSubheader>}>
         <MenuListItemMobile
           handleDrawerClose={handleDrawerClose}
           title={t('home')}

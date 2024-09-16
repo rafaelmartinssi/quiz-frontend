@@ -1,4 +1,4 @@
-import { IconButton, Menu, MenuItem } from "@mui/material";
+import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import Translate from '@mui/icons-material/Translate';
 import {useTranslations} from 'next-intl';
 import { useTheme } from "@mui/material";
@@ -56,12 +56,17 @@ export default function ToggleLocale () {
       </IconButton>
       <Menu
         id="long-menu"
-        MenuListProps={{
-          'aria-labelledby': 'long-button',
-        }}
         anchorEl={anchorEl}
         open={open}
         onClose={() => handleClose()}
+        slotProps={{
+          paper: {
+            sx: {
+              filter: 'drop-shadow(0px 2px 2px rgba(0,0,0,0.32))',
+              mt: 1.1,
+            },
+          },
+        }}
       >
         <MenuItem
           sx={{
@@ -72,7 +77,10 @@ export default function ToggleLocale () {
           selected={isPt}
           onClick={() => handleClickItem('pt')}
         >
-          {t('pt')}
+          <Typography
+            variant="body2"
+            fontWeight={'light'}
+          >{t('pt')}</Typography>
         </MenuItem>
         <MenuItem
           sx={{
@@ -83,7 +91,10 @@ export default function ToggleLocale () {
           selected={!isPt}
           onClick={() => handleClickItem('en')}
         >
-          {t('en')}
+          <Typography
+            variant="body2"
+            fontWeight={'light'}
+          >{t('en')}</Typography>
         </MenuItem>
       </Menu>
     </div>

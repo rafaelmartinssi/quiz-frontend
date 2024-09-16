@@ -45,7 +45,16 @@ export default function MenuListItemWeb (
           >
             {children}
           </ListItemIcon>
-          <ListItemText primary={title} sx={{ opacity: open ? 1 : 0 }} />
+          <ListItemText
+            primary={title}
+            primaryTypographyProps={{
+              fontWeight: 'light',
+              fontSize: '14px',
+            }}
+            sx={{
+              opacity: open ? 1 : 0
+            }}
+          />
         </ListItemButton>
       </ListItem>
     </Link>

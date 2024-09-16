@@ -3,7 +3,12 @@
     "home": "Início",
     "example": "Exemplo",
     "options": "Opções",
-    "title": "Título"
+    "title": "Título",
+    "settings": "Configurações",
+    "logout": "Sair",
+    "light": "Claro",
+    "dark": "Escuro",
+    "theme": "Tema"
   },
   "Locale": {
     "en": "Inglês",

@@ -1,14 +1,7 @@
 'use client';
 
 import { createTheme } from '@mui/material/styles';
-import { Public_Sans } from 'next/font/google';
 import { ptBR } from '@mui/material/locale';
-
-const sans = Public_Sans({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export const themeDark = createTheme(
   {
@@ -45,7 +38,11 @@ export const themeDark = createTheme(
       },
     },
     typography: {
-      fontFamily: sans.style.fontFamily,
+      fontFamily: `'Public Sans', sans-serif`,
+      fontWeightLight: 400,
+      fontWeightRegular: 500,
+      fontWeightMedium: 600,
+      fontWeightBold: 700,
     },
     components: {
       MuiAppBar: {
@@ -112,9 +109,18 @@ export const themeLight = createTheme(
         main: '#ffd666',
         dark: '#faad14'
       },
+      text: {
+        primary: '#262626',
+        secondary: '#8c8c8c',
+//      disabled: '#'
+      },
     },
     typography: {
-      fontFamily: sans.style.fontFamily,
+      fontFamily: `'Public Sans', sans-serif`,
+      fontWeightLight: 400,
+      fontWeightRegular: 500,
+      fontWeightMedium: 600,
+      fontWeightBold: 700,
     },
     components: {
       MuiAppBar: {
