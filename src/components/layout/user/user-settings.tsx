@@ -1,9 +1,9 @@
-import { Avatar, Box, Button, Divider, ListItemIcon, Menu, MenuItem, Typography } from "@mui/material";
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import { Avatar, Box, Button, Icon, ListItemIcon, Menu, MenuItem, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Logout, Settings } from "@mui/icons-material";
 import {useTranslations} from 'next-intl';
 import ToggleTheme from "./preferences/toggle-theme";
+import ToggleLocale from "./preferences/toggle-locale";
 
 export default function UserSettings () {
   const t = useTranslations('App');
@@ -24,15 +24,17 @@ export default function UserSettings () {
           borderRadius: '5px'
         }}
         variant="text"
-        startIcon={
-          <AccountCircle sx={{ width: 30, height: 30, color: 'text.secondary' }} fontSize="small" />
-        }
       >
-        <Typography
-          variant="body2"
-          color={'text.primary'}
-          fontWeight={'medium'}
-        >John Doe</Typography>
+        <Stack direction="row" alignItems="center" spacing={2}>
+          <Avatar sx={{ width: '35px', height: '35px' }} src={'/avatars/avatar-woman.png'} />
+          <Typography
+            variant="body2"
+            color={'text.primary'}
+            fontWeight={'medium'}
+          >
+            John Doe
+          </Typography>
+        </Stack>
       </Button>
       <Menu
         anchorEl={anchorEl}
@@ -49,7 +51,17 @@ export default function UserSettings () {
           },
         }}
       >
-        <Box sx={{ flexGrow: 1, px: '15px', py: '20px' }}>
+        <Box sx={{ flexGrow: 1, px: '16px', pt: '16px' }}>
+          <Typography
+            sx={{ pb: '10px' }}
+            variant="body2"
+            color={'text.primary'}
+            fontWeight={'light'}
+          >
+            {t('preferences')}
+          </Typography>
+        </Box>
+        <Box sx={{ flexGrow: 1, px: '16px', pb: '16px' }}>
           <Typography
             sx={{ pb: '10px' }}
             variant="body2"
@@ -59,6 +71,17 @@ export default function UserSettings () {
             {t('theme')}
           </Typography>
           <ToggleTheme />
+        </Box>
+        <Box sx={{ flexGrow: 1, px: '16px', pb: '16px' }}>
+          <Typography
+            sx={{ pb: '10px' }}
+            variant="body2"
+            color={'text.primary'}
+            fontWeight={'light'}
+          >
+            {t('locale')}
+          </Typography>
+          <ToggleLocale />
         </Box>
         <MenuItem onClick={handleClose}>
           <ListItemIcon>

@@ -8,7 +8,9 @@
     "logout": "Logout",
     "light": "Light",
     "dark": "Dark",
-    "theme": "Theme"
+    "theme": "Theme",
+    "locale": "Locale",
+    "preferences": "Preferences"
   },
   "Locale": {
     "en": "English",

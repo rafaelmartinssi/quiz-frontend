@@ -8,7 +8,9 @@
     "logout": "Sair",
     "light": "Claro",
     "dark": "Escuro",
-    "theme": "Tema"
+    "theme": "Tema",
+    "locale": "Localidade",
+    "preferences": "Preferências"
   },
   "Locale": {
     "en": "Inglês",

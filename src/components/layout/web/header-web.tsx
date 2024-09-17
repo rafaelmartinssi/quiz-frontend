@@ -42,8 +42,6 @@ export default function HeaderWeb ({ open }: { open: boolean }) {
   >
     <Toolbar>
       <Box sx={{ flexGrow: 1 }} />
-      <ToggleLocale />
-      <ToggleTheme />
       <UserSettings />
     </Toolbar>
   </AppBar>
